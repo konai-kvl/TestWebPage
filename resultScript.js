@@ -7,6 +7,7 @@ const facebookShareButton = document.getElementById('facebookShareButton');
 const twitterShareButton = document.getElementById('twitterShareButton');
 const kakaoShareButton = document.getElementById('kakaoShareButton');
 
+const useMona = document.getElementById('use-mona');
 const restartButton = document.getElementById('restart');
 
 // 현재 페이지의 URL에서 매개변수 값 읽기
@@ -27,6 +28,10 @@ kakaoShareButton.addEventListener('click', function () {
 // 테스트 다시하기 버튼
 restartButton.addEventListener('click', function () {
     window.location.href = 'question.html'
+});
+// 모나 서비스 이용해보기 버튼
+useMona.addEventListener('click', function () {
+    window.location.href = 'https://mobilemona.co.kr'
 });
 
 // 결과창
