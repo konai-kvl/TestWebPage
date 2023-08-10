@@ -24,12 +24,18 @@ const questions = [
 
 // 이미지 Array
 const images = [
-//     'https://github.com/gom1n/ImageSwipeWebTest/assets/87636557/8f8898f9-e948-4ef2-883d-3207fc2b23b5',
-// 'https://github.com/gom1n/ImageSwipeWebTest/assets/87636557/cee8a29a-774d-41fd-996f-8331cadfb986',
-// 'https://github.com/gom1n/ImageSwipeWebTest/assets/87636557/10c0d9f2-8a8e-45a5-affe-07fc86e2f005',
-// 'https://github.com/gom1n/ImageSwipeWebTest/assets/87636557/a5ca2038-a57c-476b-b6aa-cdf272386d3f',
-// 'https://github.com/gom1n/ImageSwipeWebTest/assets/87636557/524948d3-07cd-4115-853f-9056d5842087',
-// 'https://github.com/gom1n/ImageSwipeWebTest/assets/87636557/fa897c79-4bed-4dde-9192-f201e4b5e41d', 
+    './Images/demo.png', 
+    './Images/demo.png', 
+    './Images/demo.png', 
+    './Images/demo.png', 
+    './Images/demo.png', 
+    './Images/demo.png', 
+    './Images/demo.png', 
+    './Images/demo.png', 
+    './Images/demo.png', 
+    './Images/demo.png', 
+    './Images/demo.png', 
+    './Images/demo.png', 
 ];
 
 const button1Text = [

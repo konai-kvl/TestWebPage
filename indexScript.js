@@ -6,4 +6,4 @@ startButton.addEventListener('click', function () {
     window.location.href = 'question.html';
 });
 
-imageContainer.innerHTML = `<img src="Image.jpg" alt="Image">`;
+imageContainer.innerHTML = `<img src='./Images/demo.png' alt="Image">`;

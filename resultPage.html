@@ -13,13 +13,20 @@
     </div>
     <div class="quiz-container">
         <!-- 결과창 -->
-        <div id="result">?</div>
+        <div id="level"></div>
         <!-- 이미지 -->
         <div id="image-container"></div>
+        <!-- 결과 내용 -->
+        <div id="result">결과입니다.</div>
         <!-- 공유하기 버튼 -->
-        <button id="facebookShareButton">페이스북으로 결과 공유하기</button>
-        <button id="twitterShareButton">트위터로 결과 공유하기</button>
-        <button id="kakaoShareButton">카카오톡으로 결과 공유하기</button>
+        <div id="share-container">
+            <div id="share-title">공유하기</div>
+            <img id="facebookShareButton" src="./Images/facebook-icon.png">
+            <img id="twitterShareButton" src="./Images/twitter-icon.png">
+            <img id="kakaoShareButton" src="./Images/kakao_icon.png">
+        </div>
+        <!-- 테스트 다시하기 -->
+        <button id="restart">테스트 다시하기</button>
     </div>
     <script src="resultScript.js"></script>
 </body>

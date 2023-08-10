@@ -1,9 +1,13 @@
+
+const resultDiv = document.getElementById('level');
+const imageContainer = document.getElementById('image-container');
+// const resultContent = document.getElementById('result');
+
 const facebookShareButton = document.getElementById('facebookShareButton');
 const twitterShareButton = document.getElementById('twitterShareButton');
 const kakaoShareButton = document.getElementById('kakaoShareButton');
 
-const imageContainer = document.getElementById('image-container');
-const resultDiv = document.getElementById('result');
+const restartButton = document.getElementById('restart');
 
 // 현재 페이지의 URL에서 매개변수 값 읽기
 const urlParams = new URLSearchParams(window.location.search);
@@ -20,9 +24,14 @@ kakaoShareButton.addEventListener('click', function () {
     // shareOnFacebook();
 });
 
+// 테스트 다시하기 버튼
+restartButton.addEventListener('click', function () {
+    window.location.href = 'question.html'
+});
+
 // 결과창
 function showLevel() {
-    imageContainer.innerHTML = `<img src="Image.jpg" alt="Image">`;
+    imageContainer.innerHTML = `<img src='./Images/demo.png' alt="Image">`;
 
     resultDiv.textContent = `${resultContent(point)}`;
     resultDiv.style.fontSize = '24px';
@@ -51,6 +60,20 @@ function resultContent(point) {
     return result
 }
 
+function showResult() {
+    resultContent.style.color = "red";
+    document.appendChild(resultContent);
+    // resultContent.textContent = "????"
+    // resultContent.style.fontSize = '24px';
+    // resultContent.style.textAlign = 'center';
+    // resultContent.style.whiteSpace = 'pre-line';
+    // resultContent.style.lineHeight = 1.5;
+    // resultContent.style.font = 'bold';
+
+    // // document.querySelector('.quiz-container').appendChild(resultDiv);
+    // document.appendChild(resultDiv);
+}
+
 function shareOnFacebook() {
     const url = encodeURIComponent(window.location.href);
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
@@ -62,3 +85,4 @@ function shareOnTwitter() {
 }
 
 showLevel();
+showResult();

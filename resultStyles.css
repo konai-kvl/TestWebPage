@@ -9,7 +9,6 @@ img {
     width: 25%;
     height: 25%;
     margin: 100px;
-    background-color: blue;
 }
 
 .header {
@@ -40,27 +39,33 @@ img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+/* 공유하기 */
+#share-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
 /* 공유하기 버튼 스타일 */
 #facebookShareButton {
-    background-color: #4267B2; /* 페이스북 블루 색상 */
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 2px;
-    border-radius: 20px;
-    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
 }
 #twitterShareButton {
-    background-color: #4267B2; /* 페이스북 블루 색상 */
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 2px;
-    border-radius: 20px;
-    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
 }
 #kakaoShareButton {
-    background-color: #4267B2; /* 페이스북 블루 색상 */
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+/* 테스트 다시하기 */
+#restart {
+    margin: 20px;
+    background-color: #4267B2; 
     color: white;
     padding: 10px 20px;
     font-size: 16px;

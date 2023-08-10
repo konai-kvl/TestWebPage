@@ -9,7 +9,6 @@ img {
     width: 25%;
     height: 25%;
     margin: 100px;
-    background-color: blue;
 }
 
 .header {
@@ -40,7 +39,7 @@ img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-/* 게임 시작하기 버튼 */
+/* 시작하기 버튼 */
 .startButton {
     background-color: #4267B2; 
     color: white;
