@@ -1,7 +1,7 @@
 
 const resultDiv = document.getElementById('level');
 const imageContainer = document.getElementById('image-container');
-// const resultContent = document.getElementById('result');
+const resultContentLabel = document.getElementById('result');
 
 const facebookShareButton = document.getElementById('facebookShareButton');
 const twitterShareButton = document.getElementById('twitterShareButton');
@@ -45,38 +45,30 @@ function showLevel() {
     resultDiv.style.lineHeight = 1.5;
     resultDiv.style.font = 'bold';
 
-    // document.querySelector('.quiz-container').appendChild(resultDiv);
-    document.appendChild(resultDiv);
 }
 
 function resultContent(point) {
     if(point >= 0 && point <= 20) {
-        result = "Lv. 0\n오늘만 사는 파산아티스트"
+        level = "Lv. 0\n오늘만 사는 파산아티스트"
     } else if(point >= 30 && point <= 40) {
-        result = "Lv. 20\n상상으로 절약하는 메타버스 절약러"
+        level = "Lv. 20\n상상으로 절약하는 메타버스 절약러"
     } else if(point >= 50 && point <= 60) {
-        result = "Lv. 39\n아낀다고 아꼈는데! 알뜰 초급자"
+        level = "Lv. 39\n아낀다고 아꼈는데! 알뜰 초급자"
     } else if(point >= 70 && point <= 80) {
-        result = "Lv. 63\n내꿈은 저축왕 알뜰살뜰 주부7단"
+        level = "Lv. 63\n내꿈은 저축왕 알뜰살뜰 주부7단"
     } else if(point >= 90 && point <= 100) {
-        result = "Lv. 99\n매너온도 99% 맑은 눈의 절약킹"
+        level = "Lv. 99\n매너온도 99% 맑은 눈의 절약킹"
     } 
 
-    return result
+    return level
 }
 
 function showResult() {
-    resultContent.style.color = "red";
-    document.appendChild(resultContent);
-    // resultContent.textContent = "????"
-    // resultContent.style.fontSize = '24px';
-    // resultContent.style.textAlign = 'center';
-    // resultContent.style.whiteSpace = 'pre-line';
-    // resultContent.style.lineHeight = 1.5;
-    // resultContent.style.font = 'bold';
-
-    // // document.querySelector('.quiz-container').appendChild(resultDiv);
-    // document.appendChild(resultDiv);
+    resultContentLabel.textContent = "결과입니다.".repeat(100)
+    resultContentLabel.style.fontSize = '18px';
+    resultContentLabel.style.textAlign = 'center';
+    resultContentLabel.style.whiteSpace = 'pre-line';
+    resultContentLabel.style.lineHeight = 1.5;
 }
 
 function shareOnFacebook() {
