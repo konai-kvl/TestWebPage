@@ -108,23 +108,23 @@ function showQuestion() {
     questionDiv.textContent = questions[currentQuestionIndex];
 }
 
-// 결과창
+// 로딩 후 결과 페이지로 이동
 function showResult() {
-    questionDiv.style.display = 'none';
-    imageContainer.innerHTML = `<img src="https://github.com/gom1n/ImageSwipeWebTest/assets/87636557/84296335-c191-4c23-a3a9-6ab776f8cf3b" alt="Image">`;
-    button1.style.display = 'none';
-    button2.style.display = 'none';
+    const loadingContainer = document.getElementById("loadingContainer");
 
-    // 결과 문구 div 생성
-    // style 지정
-    const resultDiv = document.createElement('div');
-    resultDiv.textContent = `${resultContent(point)}`;
-    resultDiv.style.fontSize = '24px';
-    resultDiv.style.textAlign = 'center';
-    resultDiv.style.whiteSpace = 'pre-line';
-    resultDiv.style.lineHeight = 1.5;
+    // Show loading container
+    loadingContainer.style.display = "flex";
 
-    document.querySelector('.quiz-container').appendChild(resultDiv);
+    // Wait for a brief moment (e.g., 2 seconds)
+    setTimeout(function() {
+        // Hide loading container
+        loadingContainer.style.display = "none";
+
+        // Redirect to another HTML file
+        window.location.href = `resultPage.html?option=${point}`;
+        // 다음 페이지로 넘어갈 때 URL에 매개변수 추가
+    }, 2000); // 2000 milliseconds = 2 seconds
+
 }
 
 function resultContent(point) {

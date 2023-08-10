@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+/* 이미지 속성: 25% 로 줄이기 */
+img {
+    width: 25%;
+    height: 25%;
+    margin: 100px;
+    background-color: blue;
+}
+
+.header {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    padding: 50px 0;
+    color: black;
+}
+/* 제목 */
+.title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+/* 질문 컨테이너 */
+.quiz-container {
+    position: relative;
+    margin-bottom: 50px;
+
+    max-width: 800px;
+    min-height: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white; 
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+/* 공유하기 버튼 스타일 */
+#facebookShareButton {
+    background-color: #4267B2; /* 페이스북 블루 색상 */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#twitterShareButton {
+    background-color: #4267B2; /* 페이스북 블루 색상 */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#kakaoShareButton {
+    background-color: #4267B2; /* 페이스북 블루 색상 */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px;
+    border-radius: 20px;
+    cursor: pointer;
+}
