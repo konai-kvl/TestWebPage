@@ -4,7 +4,7 @@ const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
 
 // 상태바 Property
-const progressContainer = document.getElementById('progress-container');
+const progressBar = document.getElementById('progress-bar');
 let progress = 0;
 let point = 0;
 
@@ -155,12 +155,12 @@ function updateProgressBar() {
     if (progress > 100) {
         progress = 100;
     }
-    progressContainer.style.width = `${progress}%`;
+    progressBar.style.width = `${progress}%`;
 
     // 페이지 로딩이 끝나면 상태바 숨기기
     if (progress === 100) {
         setTimeout(function () {
-            progressContainer.style.display = 'none';
+            progressBar.style.display = 'none';
         }, 500); // 0.5초 뒤에 상태바 숨김
     }
 }
