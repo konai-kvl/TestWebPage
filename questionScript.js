@@ -6,6 +6,7 @@ const button2 = document.getElementById('button2');
 // 상태바 Property
 const progressBar = document.getElementById('progress-bar');
 const question_count = document.getElementById('question-count');
+const progress_icon = document.getElementById('icon');
 let progress = 0;
 let point = 0;
 
@@ -158,6 +159,7 @@ function updateProgressBar() {
     }
     progressBar.style.width = `${progress * 10}%`;
     question_count.textContent = `${progress}/10`;
+    progress_icon.style.marginLeft = `${progress * 10}%`;
 
     // 페이지 로딩이 끝나면 상태바 숨기기
     if (progress === 100) {
