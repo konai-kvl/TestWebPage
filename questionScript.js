@@ -5,6 +5,7 @@ const button2 = document.getElementById('button2');
 
 // 상태바 Property
 const progressBar = document.getElementById('progress-bar');
+const question_count = document.getElementById('question-count');
 let progress = 0;
 let point = 0;
 
@@ -12,14 +13,14 @@ let point = 0;
 const questions = [
     '출근 후 카페에 갔다.',
     '아 맞다! 쿠폰..',
-    '(띠링~ 이번 달 통신비 고지서가 날아왔다)',
+    '(띠링~)\n이번 달 통신비 고지서가 날아왔다.',
     '편의점에 갔다. ',
     '퇴근 후 마트에 간다.\n봉투 필요하세요?',
     '최신 유행 드라마가 보고싶은데,\nOTT 구독할까?\n(넷플릭스, 왓차, 디즈니)',
-    '덥다! 샤워 한 판 때릴까?',
-    '배고픈데 저녁은 배달시킬까?',
+    '덥다!\n샤워 한 판 때릴까?',
+    '배고픈데...\n저녁은 배달시킬까?',
     '핸드폰 살 때',
-    '하늘에서 500만원이 떨어졌다!',
+    '하늘에서\n500만원이 떨어졌다!',
 ];
 
 // 이미지 Array
@@ -151,11 +152,12 @@ function resultContent(point) {
 
 // 상태바 업데이트
 function updateProgressBar() {
-    progress += 10; 
-    if (progress > 100) {
-        progress = 100;
+    progress += 1; 
+    if (progress > 10) {
+        progress = 10;
     }
-    progressBar.style.width = `${progress}%`;
+    progressBar.style.width = `${progress * 10}%`;
+    question_count.textContent = `${progress}/10`;
 
     // 페이지 로딩이 끝나면 상태바 숨기기
     if (progress === 100) {

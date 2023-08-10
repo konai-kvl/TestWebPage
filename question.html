@@ -11,13 +11,15 @@
     <div id="loadingContainer" style="display: none;">
         <img id="loadingImage" src="https://github.com/gom1n/ImageSwipeWebTest/assets/87636557/84296335-c191-4c23-a3a9-6ab776f8cf3b" alt="Loading">
     </div>
-    <div class="header">
-        <div class="title">나의 알뜰함은 몇 %?</div>
-    </div>
     <!-- 퀴즈 컨테이너 -->
     <div class="quiz-container">
         <!-- 상태바 -->
-        <div id="progress-bar"></div>
+        <div class="progress-container">
+            <div id="question-count">1/10</div>
+            <div id="progress-background"></div>
+            <div id="progress-bar"></div>
+        </div>
+        
         <!-- 질문 라벨 -->
         <div class="question" id="question"></div>
         <!-- 이미지 -->
