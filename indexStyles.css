@@ -1,50 +1,99 @@
 body {
-    font-family: Arial, sans-serif;
-    /* margin: 0;
-    padding: 0; */
+    font-family: "Noto Sans KR", sans-serif;
     background-color: #f0f0f0;
 }
 /* 이미지 속성: 25% 로 줄이기 */
 img {
     width: 25%;
     height: 25%;
-    margin: 100px;
+    z-index: -1;
 }
 
-.header {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 20px;
-    text-align: center;
-    padding: 50px 0;
-    color: black;
-}
-/* 제목 */
-.title {
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
 /* 컨테이너 */
 .quiz-container {
     position: relative;
-    margin: 0px auto 50px auto;
+    margin: 0px auto 0px auto;
     padding: 20px;
-
-    max-width: 800px;
-    min-height: 800px;
-    background-color: white; 
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+/* 이미지 컨테이너 스타일 */
+.image-container {
+    display: flex;
+    flex-direction: column; /* 위아래로 배치 */
+    justify-content: center;
+    align-items: center;
+}
+#title {
+    margin-top: 132px;
+    width: 343px;
+    height: 158px;
+}
+#test_character {
+    margin-top: 24px;
+    width: 0;
+    opacity: 0;
+    transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
 /* 시작하기 버튼 */
+.button-container {
+    position: relative;
+}
 .startButton {
-    background-color: #4267B2; 
-    color: white;
-    padding: 10px 20px;
+    border-radius: 45px;
+    background: #1E4F9A;
+
+    width: 318px;
+    height: 80px;
+    flex-shrink: 0;
+
+    color: #FFF;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+/* 시작하기 버튼 위에 마우스 올렸을 때 */
+.startButton:hover {
+    background-color: #D0E7F8;
+    border: 4px solid #4380DE;
+    width: 318px;
+    height: 80px;
+    border-radius: 45px;
+
+    color: #1E4F9A;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+#ppl-count {
+    margin-top: 9px;
+
+    color: #000;
+    text-align: center;
     font-size: 16px;
-    border: 2px;
-    border-radius: 20px;
-    cursor: pointer;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.blue-box {
+    position: fixed;
+    top: 550px;
+    left: 0;
+    width: 100%;
+    height: 345px;
+    background-color: #B3D1FE;
+    z-index: -2; 
+    background: #B3D1FE;
+    
+    flex-shrink: 0;
+}
+#mona-logo {
+    position: relative;
+    top:365px;
+    width: 95px;
+    height: 25px;
+    flex-shrink: 0;
 }

@@ -7,17 +7,24 @@
     <link rel="stylesheet" href="indexStyles.css">
 </head>
 <body>
-    <div class="header">
-        <div class="title">나의 알뜰함은 몇 %?</div>
-    </div>
     <!-- 퀴즈 컨테이너 -->
     <div class="quiz-container">
         <!-- 이미지 -->
-        <div id="image-container"></div>
-        <!-- 선택지 버튼 2개 -->
+        <div class="image-container">
+            <img id="title" src="./Images/title.png">
+            <img id="test_character" src="./Images/test_character.png">
+        </div>
+    
+        <div class="blue-box">
+            <img id="mona-logo" src="./Images/mona-logo.png">
+        </div>
+        
+        <!-- 테스트 시작하기 -->
         <div class="button-container">
             <button class="startButton" id="startButton">테스트 시작하기</button>
+            <div id="ppl-count">현재까지 n명이 참여했어요!</div>
         </div>
+        
     </div>
     <script src="indexScript.js"></script>
 </body>
