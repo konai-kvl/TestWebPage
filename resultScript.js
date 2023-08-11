@@ -25,7 +25,7 @@ twitterShareButton.addEventListener('click', function () {
     shareOnTwitter();
 });
 kakaoShareButton.addEventListener('click', function () {
-    // shareOnFacebook();
+    kakaoShare();
 });
 
 // 테스트 다시하기 버튼
@@ -41,7 +41,7 @@ useMona.addEventListener('click', function () {
 download_result.addEventListener('click', function () {
     const capture = document.querySelector("#capture")
     html2canvas(capture).then(canvas => {
-        saveImg(canvas.toDataURL('image/jpg'), '결과 이미지.jpg');
+        saveImg(canvas.toDataURL('image/jpg'), '결과 이미지');
     });
 });
 
@@ -103,6 +103,35 @@ function shareOnTwitter() {
     const url = encodeURIComponent(window.location.href);
     window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
 }
+
+// 카카오톡 공유하기 기능
+Kakao.init('ff7a17f75d28483cf203553d036aa097');
+function kakaoShare() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: `${resultContent(point)}`,
+        description: '절약 유형 테스트 결과입니다.',
+        imageUrl: 'https://github.com/gom1n/ImageSwipeWebTest/assets/87636557/84296335-c191-4c23-a3a9-6ab776f8cf3b',
+        link: {
+          mobileWebUrl: 'https://konai-kvl.github.io/TestWebPage/',
+          webUrl: 'https://konai-kvl.github.io/TestWebPage/',
+        },
+      },
+      buttons: [
+        {
+          title: '웹으로 보기',
+          link: {
+            mobileWebUrl: window.location.href,
+            webUrl: window.location.href,
+          },
+        },
+      ],
+      // 카카오톡 미설치 시 카카오톡 설치 경로이동
+      installTalk: true,
+    })
+}
+
 
 showLevel();
 showResult();
