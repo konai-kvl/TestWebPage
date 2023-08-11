@@ -11,7 +11,7 @@ body {
 img {
     width: 25%;
     height: 25%;
-    margin: 100px;
+    margin: 100px auto;
 }
 
 /* 결과 컨테이너 */
@@ -75,7 +75,7 @@ img {
 }
 /* 테스트 다시하기 */
 #restart {
-    margin: 36px 10px 10px auto;
+    margin: 36px 10px 10px 10px;
     background-color: #3677D9;
     border: 4px solid #4380DE;
     width: 240px;
@@ -97,7 +97,9 @@ img {
     margin-bottom: 20px;
     background-color: #3677D9;
     border: 4px solid #4380DE;
-    width: 500px;
+
+    padding: 10px 60px;
+    max-width: 500px;
     height: 70px;
     border-radius: 45px;
 
@@ -153,9 +155,13 @@ img {
 }
 .highlighted-text {
     margin-top: 20px;
+    white-space: pre-line; /* 줄바꿈 문자(\n)를 줄 바꿈으로 처리 */
+    display: inline-block; /* 인라인 블록 요소로 표시 */
+    word-wrap: break-word; /* 단어가 길어질 경우 자동으로 줄 바꿈 */
+    line-height: 1.5;
 }
 #recommend-plan {
-    margin: 70px 130px 70px 130px;
+    margin: 70px auto 70px auto;
     white-space: pre-line; /* 줄바꿈 문자(\n)를 줄 바꿈으로 처리 */
     display: inline-block; /* 인라인 블록 요소로 표시 */
     word-wrap: break-word; /* 단어가 길어질 경우 자동으로 줄 바꿈 */
