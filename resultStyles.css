@@ -23,12 +23,12 @@ img {
     max-width: 800px;
     min-height: 800px;
     
-    background-color: white; 
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    border: 2px solid #4380DE;
+    background: #FFF;
     text-align: center;
 }
-#capture {
+/* #capture {
     position: relative;
     margin: 40px auto 50px auto;
     padding: 20px;
@@ -40,7 +40,7 @@ img {
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
+} */
 .etc-container {
     position: relative;
     margin: 40px auto 50px auto;
@@ -114,4 +114,33 @@ img {
     border: 2px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+/* 추천 요금제 컨테이너 */
+.plan-container {
+    position: relative;
+    margin: 40px auto 50px auto;
+    padding: 20px;
+
+    min-width: 480px;
+    min-height: 355px;
+    
+    border-radius: 25px;
+    border: 2px solid #4380DE;
+    background: #FFF;
+    text-align: center;
+
+    /* 내부 글씨 스타일 */
+    color: #000;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+#highlighted-text {
+    margin: 50px;
+}
+#recommend-plan {
+    margin: 130px;
 }

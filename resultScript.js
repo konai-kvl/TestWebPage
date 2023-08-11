@@ -6,6 +6,7 @@ const resultContentLabel = document.getElementById('result');
 const facebookShareButton = document.getElementById('facebookShareButton');
 const twitterShareButton = document.getElementById('twitterShareButton');
 const kakaoShareButton = document.getElementById('kakaoShareButton');
+const instaShareButton = document.getElementById('instaShareButton');
 
 const useMona = document.getElementById('use-mona');
 const restartButton = document.getElementById('restart');
@@ -26,6 +27,17 @@ twitterShareButton.addEventListener('click', function () {
 });
 kakaoShareButton.addEventListener('click', function () {
     kakaoShare();
+});
+instaShareButton.addEventListener('click', function () {
+    // kakaoShare();
+    event.preventDefault();
+    try {
+        window.location.href = "instagram://media";
+    } catch {
+        window.open("https://itunes.apple.com/kr/app/instagram/id389801252?mt=8")
+        // window.location.href = "intent://instagram.com/#Intent;package=com.instagram.android;scheme=https;end" ;
+    }
+    
 });
 
 // 테스트 다시하기 버튼
@@ -102,6 +114,9 @@ function shareOnTwitter() {
     const text = encodeURIComponent('Check out this awesome website!');
     const url = encodeURIComponent(window.location.href);
     window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+}
+function shareOnInstagram() {
+    
 }
 
 // 카카오톡 공유하기 기능
