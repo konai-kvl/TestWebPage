@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="resultStyles.css">
 </head>
 <body>
-    <!-- <div class="header">
-        <div class="title">나의 알뜰함은 몇 %?</div>
-    </div> -->
-    <div class="quiz-container">
+    <div class="result-container" id="capture">
         <!-- 결과창 -->
         <div id="level"></div>
         <!-- 이미지 -->
         <div id="image-container"></div>
         <!-- 결과 내용 -->
         <div id="result">결과입니다.</div>
+    </div>
+    <div class="etc-container">
         <!-- 모나 서비스 이용해보기 -->
         <button id="use-mona">모나 서비스 이용해보기</button>
+        <!-- 결과창 다운로드 -->
+        <button id="download-result">결과 다운로드</button>
         <!-- 공유하기 버튼 -->
         <div id="share-container">
             <div id="share-title">공유하기</div>
@@ -30,6 +31,8 @@
         <!-- 테스트 다시하기 -->
         <button id="restart">테스트 다시하기</button>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="resultScript.js"></script>
 </body>
 </html>

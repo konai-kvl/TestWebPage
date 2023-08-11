@@ -1,6 +1,11 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+
+    display: flex;
+    flex-direction: column; /* 위아래로 배치 */
+    justify-content: center;
+    align-items: center;
 }
 /* 이미지 속성: 25% 로 줄이기 */
 img {
@@ -9,22 +14,8 @@ img {
     margin: 100px;
 }
 
-/* .header {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 20px;
-    text-align: center;
-    padding: 50px 0;
-    color: black;
-}
-
-.title {
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 10px;
-} */
-/* 질문 컨테이너 */
-.quiz-container {
+/* 결과 컨테이너 */
+.result-container {
     position: relative;
     margin: 40px auto 50px auto;
     padding: 20px;
@@ -35,6 +26,32 @@ img {
     background-color: white; 
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+#capture {
+    position: relative;
+    margin: 40px auto 50px auto;
+    padding: 20px;
+
+    max-width: 800px;
+    min-height: 800px;
+    
+    background-color: white; 
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.etc-container {
+    position: relative;
+    margin: 40px auto 50px auto;
+    padding: 20px;
+
+    max-width: 800px;
+    min-height: 800px;
+    
+    /* background-color: white; 
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     text-align: center;
 }
 /* 공유하기 */
@@ -73,6 +90,17 @@ img {
 }
 /* 모나 서비스 이용해보기 */
 #use-mona {
+    margin: 20px;
+    background-color: #4267B2; 
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* 결과 다운로드 */
+#download-result {
     margin: 20px;
     background-color: #4267B2; 
     color: white;

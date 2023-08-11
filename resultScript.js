@@ -10,6 +10,9 @@ const kakaoShareButton = document.getElementById('kakaoShareButton');
 const useMona = document.getElementById('use-mona');
 const restartButton = document.getElementById('restart');
 
+const download_result = document.getElementById('download-result');
+const testResultContainer = document.getElementById('result-container')
+
 // 현재 페이지의 URL에서 매개변수 값 읽기
 const urlParams = new URLSearchParams(window.location.search);
 const point = urlParams.get('option');
@@ -33,6 +36,26 @@ restartButton.addEventListener('click', function () {
 useMona.addEventListener('click', function () {
     window.location.href = 'https://mobilemona.co.kr'
 });
+
+// 결과 다운로드 버튼 클릭 이벤트
+download_result.addEventListener('click', function () {
+    const capture = document.querySelector("#capture")
+    html2canvas(capture).then(canvas => {
+        saveImg(canvas.toDataURL('image/jpg'), '결과 이미지.jpg');
+    });
+});
+
+const saveImg = (uri, filename) => {
+    let link = document.createElement('a');
+
+    document.body.appendChild(link);
+
+    link.href = uri;
+    link.download = filename;
+    link.click();
+
+    document.body.removeChild(link);
+};
 
 // 결과창
 function showLevel() {
