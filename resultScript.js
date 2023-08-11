@@ -2,6 +2,7 @@
 const resultDiv = document.getElementById('level');
 const imageContainer = document.getElementById('image-container');
 const resultContentLabel = document.getElementById('result');
+const recommend_plan = document.getElementById('recommend-plan');
 
 const facebookShareButton = document.getElementById('facebookShareButton');
 const twitterShareButton = document.getElementById('twitterShareButton');
@@ -114,6 +115,10 @@ function showResult() {
     resultContentLabel.style.lineHeight = 1.5;
 }
 
+function showPlan() {
+    recommend_plan.textContent = "모나100분1G안심1\n1GB+1Mbps\n100분100건\n15,400원 -> 4,400원"
+}
+
 function shareOnFacebook() {
     const url = encodeURIComponent(window.location.href);
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
@@ -122,9 +127,6 @@ function shareOnTwitter() {
     const text = encodeURIComponent('Check out this awesome website!');
     const url = encodeURIComponent(window.location.href);
     window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
-}
-function shareOnInstagram() {
-    
 }
 
 // 카카오톡 공유하기 기능
@@ -158,3 +160,4 @@ function kakaoShare() {
 
 showLevel();
 showResult();
+showPlan();
