@@ -29,16 +29,24 @@ kakaoShareButton.addEventListener('click', function () {
     kakaoShare();
 });
 instaShareButton.addEventListener('click', function () {
-    // kakaoShare();
-    event.preventDefault();
-    try {
-        window.location.href = "instagram://media";
-    } catch {
-        window.open("https://itunes.apple.com/kr/app/instagram/id389801252?mt=8")
-        // window.location.href = "intent://instagram.com/#Intent;package=com.instagram.android;scheme=https;end" ;
+    if (isInstagramAppInstalled()) {
+        openInstagramApp();
+    } else {
+        redirectToInstagramWebsite();
     }
-    
 });
+function isInstagramAppInstalled() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    return userAgent.includes("instagram");
+}
+function openInstagramApp() {
+    // Instagram 앱으로 이동하는 스킴을 호출
+    window.location.href = "instagram://";
+}
+function redirectToInstagramWebsite() {
+    // 웹 브라우저에서 Instagram 사이트로 이동
+    window.location.href = "https://www.instagram.com";
+}
 
 // 테스트 다시하기 버튼
 restartButton.addEventListener('click', function () {
