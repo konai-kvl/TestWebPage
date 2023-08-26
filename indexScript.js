@@ -19,6 +19,22 @@ link_share.addEventListener('click', function () {
   alert("링크가 복사되었습니다.");
 });
 
+startButton.addEventListener("mouseenter", () => {
+    startButton.src = "./Images/start_button_hover.png"; // 호버시 이미지 변경
+});
+  
+  startButton.addEventListener("mouseleave", () => {
+    startButton.src = "./Images/start_button.png"; // 마우스가 벗어났을 때 이미지 원래대로 변경
+});
+link_share.addEventListener("mouseenter", () => {
+    link_share.src = "./Images/share_test_button_hover.png"; // 호버시 이미지 변경
+});
+  
+link_share.addEventListener("mouseleave", () => {
+    link_share.src = "./Images/share_test_button.png"; // 마우스가 벗어났을 때 이미지 원래대로 변경
+});
+
+
 // 이미지 애니메이션
 function animateImage() {
     const test_character = document.getElementById("test_character");

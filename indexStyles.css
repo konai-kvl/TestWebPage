@@ -7,11 +7,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-/* 이미지 속성: 25% 로 줄이기 */
-img {
-    width: 25%;
-    height: 25%;
-}
+
 
 /* 컨테이너 */
 .quiz-container {
@@ -46,65 +42,15 @@ img {
     justify-content: center;
     align-items: center;
 }
-.startButton {
-    margin: 20px;
-    border-radius: 45px;
-    background: #1E4F9A;
-    border-color: #1E4F9A;
-
+#startButton {
     width: 300px;
     height: 70px;
-    flex-shrink: 0;
-
-    color: #EFF3F6;
-    text-align: center;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    margin: 8px;
 }
-/* 시작하기 버튼 위에 마우스 올렸을 때 */
-.startButton:hover {
-    background-color: #D0E7F8;
-    border: 4px solid #4380DE;
+#link_share {
     width: 300px;
     height: 70px;
-    border-radius: 45px;
-
-    color: #1E4F9A;
-    text-align: center;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-.link_share {
-    background-color: #3677D9;
-    border: 4px solid #4380DE;
-    width: 300px;
-    height: 70px;
-    border-radius: 45px;
-
-    color: #EFF3F6;
-    text-align: center;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-.link_share:hover {
-    background-color: #D0E7F8;
-    border: 4px solid #4380DE;
-    width: 300px;
-    height: 70px;
-    border-radius: 45px;
-
-    color: #1E4F9A;
-    text-align: center;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    margin: 8px;
 }
 #ppl-count {
     margin-top: 9px;
