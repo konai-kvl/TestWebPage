@@ -1,19 +1,22 @@
 
 const resultDiv = document.getElementById('level');
 const imageContainer = document.getElementById('image-container');
-const resultContentLabel = document.getElementById('result');
-const recommend_plan = document.getElementById('recommend-plan');
+
+const resultTypeLabel = document.getElementById('result-my-type-label');
+const resultPsnLabel = document.getElementById('result-my-psn-label');
+const saveTipLabel = document.getElementById('result-save-tip-label');
 
 const facebookShareButton = document.getElementById('facebookShareButton');
 const twitterShareButton = document.getElementById('twitterShareButton');
 const kakaoShareButton = document.getElementById('kakaoShareButton');
 const instaShareButton = document.getElementById('instaShareButton');
 
-const useMona = document.getElementById('use-mona');
+const useMona = document.getElementById('move-to-mona');
+const findMonaPlan = document.getElementById('move-to-find-plan');
 const restartButton = document.getElementById('restart');
+const copyLink = document.getElementById('result-copy-link');
 
 const download_result = document.getElementById('download-result');
-const testResultContainer = document.getElementById('result-container')
 
 // 현재 페이지의 URL에서 매개변수 값 읽기
 const urlParams = new URLSearchParams(window.location.search);
@@ -57,38 +60,48 @@ restartButton.addEventListener('click', function () {
 useMona.addEventListener('click', function () {
     window.location.href = 'https://mobilemona.co.kr'
 });
+// 모나 요금제 찾아보기
+findMonaPlan.addEventListener('click', function () {
+    window.location.href = 'https://mobilemona.co.kr'
+});
+// 결과 링크 복사
+copyLink.addEventListener("click", () => {
+    const currentLink = window.location.href; // 현재 페이지의 링크 가져오기
+
+    // 가상의 텍스트 입력 상자 생성하여 복사
+    const tempInput = document.createElement("input");
+    tempInput.value = currentLink;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+
+    alert("링크가 복사되었습니다.");
+  });
 
 // 결과 다운로드 버튼 클릭 이벤트
 download_result.addEventListener('click', function () {
-    const capture = document.querySelector("#capture")
-    html2canvas(capture).then(canvas => {
-        saveImg(canvas.toDataURL('image/jpg'), '결과 이미지');
-    });
-});
+    // 새로운 링크 요소 생성
+    const imageUrl = './Images/level0_download.png'
+    const link = document.createElement("a");
+    link.href = imageUrl;
 
-const saveImg = (uri, filename) => {
-    let link = document.createElement('a');
-
-    document.body.appendChild(link);
-
-    link.href = uri;
+    // 다운로드할 파일 이름 설정 (선택적)
+    const filename = imageUrl.split("/").pop(); // URL에서 파일 이름 추출
     link.download = filename;
+
+    // 링크를 클릭하여 다운로드 시작
+    document.body.appendChild(link);
     link.click();
 
+    // 링크 요소 삭제
     document.body.removeChild(link);
-};
+});
 
 // 결과창
 function showLevel() {
-    imageContainer.innerHTML = `<img src='./Images/demo.png' alt="Image">`;
-
-    resultDiv.textContent = `${resultContent(point)}`;
-    resultDiv.style.fontSize = '24px';
-    resultDiv.style.textAlign = 'center';
-    resultDiv.style.whiteSpace = 'pre-line';
-    resultDiv.style.lineHeight = 1.5;
-    resultDiv.style.font = 'bold';
-
+    imageContainer.innerHTML = `<img src='./Images/mona_character.png' alt="Image">`;
+    resultDiv.innerHTML = `<img src='./Images/result_level.png' alt="Image">`;
 }
 
 function resultContent(point) {
@@ -108,16 +121,29 @@ function resultContent(point) {
 }
 
 function showResult() {
-    resultContentLabel.textContent = "결과입니다.".repeat(100)
-    resultContentLabel.style.fontSize = '18px';
-    resultContentLabel.style.textAlign = 'center';
-    resultContentLabel.style.whiteSpace = 'pre-line';
-    resultContentLabel.style.lineHeight = 1.5;
+
+    resultTypeLabel.textContent = "결과입니다.".repeat(30)
+    resultTypeLabel.style.fontSize = '18px';
+    resultTypeLabel.style.textAlign = 'center';
+    resultTypeLabel.style.whiteSpace = 'pre-line';
+    resultTypeLabel.style.lineHeight = 1.5;
+    resultTypeLabel.style.margin = '20px'
+
+    resultPsnLabel.textContent = "결과입니다.".repeat(30)
+    resultPsnLabel.style.fontSize = '18px';
+    resultPsnLabel.style.textAlign = 'center';
+    resultPsnLabel.style.whiteSpace = 'pre-line';
+    resultPsnLabel.style.lineHeight = 1.5;
+    resultPsnLabel.style.margin = '20px'
+
+    saveTipLabel.textContent = "결과입니다.".repeat(30)
+    saveTipLabel.style.fontSize = '18px';
+    saveTipLabel.style.textAlign = 'center';
+    saveTipLabel.style.whiteSpace = 'pre-line';
+    saveTipLabel.style.lineHeight = 1.5;
+    saveTipLabel.style.margin = '20px'
 }
 
-function showPlan() {
-    recommend_plan.textContent = "모나100분1G안심1\n1GB+1Mbps\n100분100건\n15,400원 -> 4,400원"
-}
 
 function shareOnFacebook() {
     const url = encodeURIComponent(window.location.href);
@@ -160,4 +186,3 @@ function kakaoShare() {
 
 showLevel();
 showResult();
-showPlan();

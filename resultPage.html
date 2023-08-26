@@ -8,38 +8,59 @@
     <link rel="stylesheet" href="resultStyles.css">
 </head>
 <body>
-    <!-- 결과 컨테이너 -->
-    <div class="result-container" id="capture">
+    <!-- 결과 컨테이너: 이미지, 레벨-->
+    <div class="result-container">
+        <!-- 결과 타이틀 -->
+        <img src="./Images/result_title.png">
         <!-- 결과 레벨 -->
         <div id="level"></div>
         <!-- 이미지 -->
         <div id="image-container"></div>
-        <!-- 결과 내용 -->
-        <div id="result">결과입니다.</div>
     </div>
+    <!-- 내 절약 유형 요약 -->
+    <div class="result-my-type-container">
+        <img src="./Images/my_type.png">
+        <div id="result-my-type-label">결과입니다.</div>
+    </div>
+    <!-- 절약 유형으로 본 나의 성향 -->
+    <div class="result-my-psn-container">
+        <img src="./Images/my_psn.png">
+        <div id="result-my-psn-label">결과입니다.</div>
+    </div>
+    <!-- 절약 Tip -->
+    <div class="result-save-tip-container">
+        <img src="./Images/save_tip.png">
+        <div id="result-save-tip-label">결과입니다.</div>
+    </div>
+    
+
+    <!-- 추천하는 요금제 -->
     <div class="plan-container">
-        <div class="highlighted-text">당신에게 추천하는 MONA 요금제!</div>
-        <div id="recommend-plan">?</div>
+        <img id="recommend-plan-img" src="./Images/recommend_plan_level0.png">
+        <img id="move-to-find-plan" src="./Images/move_to_mona.png">
     </div>
-    <div class="etc-container">
-        <!-- 테스트 다시하기 -->
-        <button id="restart">테스트 다시하기</button>
-        <!-- 결과창 다운로드 -->
-        <button id="download-result">결과 다운로드</button>
-        <!-- 모나 서비스 이용해보기 -->
-        <button id="use-mona">모나 서비스 이용해보기</button>
-        <!-- 공유하기 버튼 -->
-        <div id="share-container">
-            <div id="share-title">SNS로 공유하기</div>
+    <!-- 공유하기 버튼 -->
+    <div id="share-container">
+        <div id="share-title">SNS로 공유하기</div>
+        <div id="share-button-container">
             <img id="facebookShareButton" src="./Images/facebook-icon.png">
             <img id="instaShareButton" src="./Images/instagram.png">
             <img id="kakaoShareButton" src="./Images/kakao_icon.png">
             <img id="twitterShareButton" src="./Images/twitter-icon.png">
         </div>
     </div>
+    <div class="etc-container">
+        <!-- 결과창 다운로드 -->
+        <button id="download-result">결과 다운로드</button>
+        <!-- 결과 링크 복사 -->
+        <button id="result-copy-link">결과 링크 복사</button>
+    </div>
+    <!-- 테스트 다시하기 -->
+    <button id="move-to-mona">MONA 홈페이지 방문해보기</button>
+    <!-- 테스트 다시하기 -->
+    <button id="restart">테스트 다시하기</button>
 
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="resultScript.js"></script>
 </body>
 </html>
