@@ -62,7 +62,7 @@ useMona.addEventListener('click', function () {
 });
 // 모나 요금제 찾아보기
 findMonaPlan.addEventListener('click', function () {
-    window.location.href = 'https://mobilemona.co.kr'
+    window.location.href = 'https://mobilemona.co.kr/view/plan/findListNext.aspx'
 });
 // 결과 링크 복사
 copyLink.addEventListener("click", () => {
