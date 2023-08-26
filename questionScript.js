@@ -146,7 +146,7 @@ function updateProgressBar() {
     progress_icon.style.marginLeft = `${progress * 10}%`;
 
     // 페이지 로딩이 끝나면 상태바 숨기기
-    if (progress === 100) {
+    if (progress === 10) {
         setTimeout(function () {
             progressBar.style.display = 'none';
         }, 500); // 0.5초 뒤에 상태바 숨김

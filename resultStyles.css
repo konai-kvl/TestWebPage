@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
     background-color: #f0f0f0;
     
     display: flex;
@@ -20,9 +20,6 @@ body {
     max-width: 480px;
     min-height: 600px;
     
-    /* border-radius: 25px;
-    border: 2px solid #4380DE;
-    background: #FFF; */
     text-align: center;
 
     white-space: pre-line; /* 줄바꿈 문자(\n)를 줄 바꿈으로 처리 */
