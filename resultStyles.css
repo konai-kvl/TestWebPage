@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-
+    
     display: flex;
     flex-direction: column; /* 위아래로 배치 */
     justify-content: center;
@@ -32,27 +32,9 @@ img {
     display: inline-block; /* 인라인 블록 요소로 표시 */
     word-wrap: break-word; /* 단어가 길어질 경우 자동으로 줄 바꿈 */
 }
-.result-content-container {
-    position: relative;
-    margin: 0px auto 23px auto;
-    /* padding: 20px; */
-
-    max-width: 480px;
-    min-height: 800px;
-    
-    border-radius: 25px;
-    border: 2px solid #4380DE;
-    background: #FFF;
-    text-align: center;
-
-    white-space: pre-line; /* 줄바꿈 문자(\n)를 줄 바꿈으로 처리 */
-    display: inline-block; /* 인라인 블록 요소로 표시 */
-    word-wrap: break-word; /* 단어가 길어질 경우 자동으로 줄 바꿈 */
-}
 .result-my-type-container {
     position: relative;
     margin: 0px auto 23px auto;
-    /* padding: 20px; */
 
     max-width: 480px;
     min-height: 210px;
@@ -99,6 +81,7 @@ img {
     white-space: pre-line; /* 줄바꿈 문자(\n)를 줄 바꿈으로 처리 */
     display: inline-block; /* 인라인 블록 요소로 표시 */
     word-wrap: break-word; /* 단어가 길어질 경우 자동으로 줄 바꿈 */
+    line-height: 28.96px;
 }
 
 #share-container {
