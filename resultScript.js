@@ -250,6 +250,20 @@ function kakaoShare() {
       installTalk: true,
     })
 }
+function resultContent(point) {
+    if(point >= 0 && point <= 20) {
+        result = "Lv. 0 오늘만 사는 파산아티스트"
+    } else if(point >= 30 && point <= 40) {
+        result = "Lv. 20 상상으로 절약하는 메타버스 절약러"
+    } else if(point >= 50 && point <= 60) {
+        result = "Lv. 39 아낀다고 아꼈는데! 알뜰 초급자"
+    } else if(point >= 70 && point <= 80) {
+        result = "Lv. 63 내꿈은 저축왕 알뜰살뜰 주부7단"
+    } else if(point >= 90 && point <= 100) {
+        result = "Lv. 99 매너온도 99% 맑은 눈의 절약킹"
+    } 
 
+    return result
+}
 
 showResult(point);
