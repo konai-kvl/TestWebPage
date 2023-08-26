@@ -184,8 +184,16 @@ function showResult(point) {
         plan_img = result_level4.plan_img_path
     } 
 
-    imageContainer.innerHTML = `<img src=${character_img} alt="Image">`;
-    resultDiv.innerHTML = `<img src=${level_title_img} alt="Image">`;
+    // imageContainer.innerHTML = `<img src=${character_img} alt="Image">`;
+    imageContainer.src = `${character_img}`
+    imageContainer.style.width = '100%'
+    imageContainer.style.maxWidth = '480px'
+
+    // resultDiv.innerHTML = `<img src=${level_title_img} alt="Image">`;
+    resultDiv.src = `${level_title_img}`
+    resultDiv.style.width = '100%'
+    resultDiv.style.maxWidth = '480px'
+
     planImg.src = plan_img
 
     resultTypeLabel.textContent = level_type
