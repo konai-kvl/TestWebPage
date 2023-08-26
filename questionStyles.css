@@ -4,15 +4,6 @@ body {
     padding: 0;
     background-color: #EFF3F6;
 }
-
-/* 아이콘 스타일 */
-#icon {
-    font-size: 20px;
-    margin-left: 10px;
-    position: absolute;
-    margin-top: 55px;
-    margin-left: 4%;
-}
 /* 이미지 속성: 25% 로 줄이기 */
 img {
     width: 25%;
@@ -20,17 +11,24 @@ img {
     margin-bottom: 73px;
 }
 
+/* 아이콘 스타일 */
+#icon {
+    position: absolute;
+    margin-top: 47px;
+    margin-left: 2%;
+}
+#progressbar_icon {
+    width: 68px;
+    height: 68px;
+}
 
 /* 질문 컨테이너 */
 .quiz-container {
     position: relative;
-    max-width: 400px;
+    max-width: 480px;
     min-height: 600px;
     margin: 0 auto;
     padding: 20px;
-    /* background-color: purple; 
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     text-align: center;
 }
 
@@ -56,7 +54,7 @@ img {
     position: absolute;
     margin: 67px 20px 0px 20px;
     width: 0;
-    height: 5px;
+    height: 14px;
     border-radius: 5px 0px 0px 5px;
     background: #00F;
     transition: width 0.5s ease-in-out; /* 애니메이션 효과 추가 */
@@ -65,7 +63,7 @@ img {
     position: absolute;
     margin: 67px 20px 0px 20px;
     width: 100%;
-    height: 5px;
+    height: 14px;
     border-radius: 5px;
     background: #C3C3E1;
 }
@@ -77,9 +75,8 @@ img {
     margin-top: 190px;
     
     text-align: center;
-    font-size: 25px;
-    font-weight: 500;
-    font-weight: 500;
+    font-size: 36px;
+    font-weight: 700;
     line-height: normal;
     font-style: normal;
     
@@ -88,7 +85,7 @@ img {
     display: inline-block; /* 인라인 블록 요소로 표시 */
     font-weight: bold;
     word-wrap: break-word; /* 단어가 길어질 경우 자동으로 줄 바꿈 */
-    line-height: 1.5; /* 줄 간격 조절 */
+    line-height: 52.13px; /* 줄 간격 조절 */
     min-height: 150px;
 }
 /* 버튼 컨테이너 */
@@ -102,10 +99,10 @@ img {
 .button1 {
     padding: 10px 20px;
     color: black;
-    border-radius: 25px;
-    border: 2px solid #4380DE;
-    background: #FFF;
-    width: 350px;
+    border-radius: 30px;
+    border: 3px solid #C3C3E1;
+    background: #FFFFFF;
+    width: 480px;
     height: 120px;
     cursor: pointer;
     margin: 5px;
@@ -113,18 +110,18 @@ img {
     /* 버튼 크기 및 텍스트 레이아웃 조절 */
     text-align: center;
     white-space: pre-line; /* 줄바꿈 문자(\n)를 줄 바꿈으로 처리 */
-    line-height: 1.2; /* 줄 간격 조절 */
-    font-size: 22px;
+    line-height: 34.75px; /* 줄 간격 조절 */
+    font-size: 24px;
     font-weight: 500;
 }
 
 .button2 {
     padding: 10px 20px;
     color: black;
-    border-radius: 25px;
-    border: 2px solid #4380DE;
-    background: #FFF;
-    width: 350px;
+    border-radius: 30px;
+    border: 3px solid #C3C3E1;
+    background: #FFFFFF;
+    width: 480px;
     height: 120px;
     cursor: pointer;
     margin: 5px;
@@ -132,8 +129,8 @@ img {
     /* 버튼 크기 및 텍스트 레이아웃 조절 */
     text-align: center;
     white-space: pre-line; /* 줄바꿈 문자(\n)를 줄 바꿈으로 처리 */
-    line-height: 1.2; /* 줄 간격 조절 */
-    font-size: 22px;
+    line-height: 34.75px; /* 줄 간격 조절 */
+    font-size: 24px;
     font-weight: 500;
 }
 /* 버튼 위에 마우스 올려놓았을 때 이벤트 */
