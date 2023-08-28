@@ -6,8 +6,8 @@ body {
 }
 /* 이미지 속성: 25% 로 줄이기 */
 img {
-    width: 25%;
-    height: 25%;
+    width: 35%;
+    height: 35%;
     margin-bottom: 73px;
 }
 
@@ -89,7 +89,8 @@ img {
     font-weight: bold;
     word-wrap: break-word; /* 단어가 길어질 경우 자동으로 줄 바꿈 */
     line-height: 37px; /* 줄 간격 조절 */
-    min-height: 150px;
+    
+    min-height: 100px;
 }
 /* 버튼 컨테이너 */
 .button-container {

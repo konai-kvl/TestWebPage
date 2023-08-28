@@ -26,18 +26,16 @@ const questions = [
 
 // 이미지 Array
 const images = [
-    './Images/demo.png', 
-    './Images/demo.png', 
-    './Images/demo.png', 
-    './Images/demo.png', 
-    './Images/demo.png', 
-    './Images/demo.png', 
-    './Images/demo.png', 
-    './Images/demo.png', 
-    './Images/demo.png', 
-    './Images/demo.png', 
-    './Images/demo.png', 
-    './Images/demo.png', 
+    './Images/Question/QuestionImages/1_coffee.gif', 
+    './Images/Question/QuestionImages/2_stamp.gif', 
+    './Images/Question/QuestionImages/3_pay.gif', 
+    './Images/Question/QuestionImages/4_gimbap.gif', 
+    './Images/Question/QuestionImages/5_bags.gif', 
+    './Images/Question/QuestionImages/6_OTT.gif', 
+    './Images/Question/QuestionImages/7_shower.gif', 
+    './Images/Question/QuestionImages/8_delivery.gif', 
+    './Images/Question/QuestionImages/9_newphone.gif', 
+    './Images/Question/QuestionImages/10_moneys.gif', 
 ];
 
 const button1Text = [

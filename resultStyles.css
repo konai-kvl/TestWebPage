@@ -82,7 +82,7 @@ body {
 #facebookShareButton {
     width: 50px;
     height: 50px;
-    margin: 5px;
+    margin: 3px;
 }
 #instaShareButton {
     width: 50px;
@@ -148,7 +148,7 @@ body {
     height: 12.5%;
 
     position: absolute;
-    bottom: 34px;
+    bottom: 38px;
     left: 50%;
     transform: translateX(-50%);
 }
