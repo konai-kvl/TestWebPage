@@ -189,11 +189,11 @@ function showResult(point) {
     } 
 
     imageContainer.src = `${character_img}`
-    imageContainer.style.width = '100%'
+    imageContainer.style.width = '78%'
     imageContainer.style.maxWidth = '480px'
 
     resultDiv.src = `${level_title_img}`
-    resultDiv.style.width = '100%'
+    resultDiv.style.width = '60%'
     resultDiv.style.maxWidth = '480px'
 
     planImg.src = plan_img
