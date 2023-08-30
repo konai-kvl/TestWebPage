@@ -1,4 +1,4 @@
-const apiUrl = 'http://ec2-43-201-231-11.ap-northeast-2.compute.amazonaws.com:3001'; // API의 주소
+const apiUrl = 'https://port-0-visit-count-28j232bllx11wrg.sel5.cloudtype.app/'; // API의 주소
 const pplCount = document.getElementById('ppl-count');
 
 let count = 0;
