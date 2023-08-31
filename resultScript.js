@@ -24,7 +24,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const point = urlParams.get('option');
 
 const result_level0 = {
-    charac_img_path: './Images/mona_character.png',
+    charac_img_path: './Images/Result/Level0/level1_charac.png',
     level_title_path: './Images/Result/Level0/result_title_level0.png',
     type_img_path: './Images/Result/Level0/level0_type.png',
     psn_img_path: './Images/Result/Level0/level0_psn.png',
@@ -33,7 +33,7 @@ const result_level0 = {
     download_img_path: './Images/level0_download.png'
 };
 const result_level1 = {
-    charac_img_path: './Images/mona_character.png',
+    charac_img_path: './Images/Result/Level1/level2_charac.png',
     level_title_path: './Images/Result/Level1/result_title_level1.png',
     type_img_path: './Images/Result/Level1/level1_type.png',
     psn_img_path: './Images/Result/Level1/level1_psn.png',
@@ -42,7 +42,7 @@ const result_level1 = {
     download_img_path: './Images/level0_download.png'
 };
 const result_level2 = {
-    charac_img_path: './Images/mona_character.png',
+    charac_img_path: './Images/Result/Level2/level3_charac.png',
     level_title_path: './Images/Result/Level2/result_title_level2.png',
     type_img_path: './Images/Result/Level2/level2_type.png',
     psn_img_path: './Images/Result/Level2/level2_psn.png',
@@ -51,7 +51,7 @@ const result_level2 = {
     download_img_path: './Images/level0_download.png'
 };
 const result_level3 = {
-    charac_img_path: './Images/mona_character.png',
+    charac_img_path: './Images/Result/Level3/level4_charac.png',
     level_title_path: './Images/Result/Level3/result_title_level3.png',
     type_img_path: './Images/Result/Level3/level3_type.png',
     psn_img_path: './Images/Result/Level3/level3_psn.png',
@@ -60,7 +60,7 @@ const result_level3 = {
     download_img_path: './Images/level0_download.png'
 };
 const result_level4 = {
-    charac_img_path: './Images/mona_character.png',
+    charac_img_path: './Images/Result/Level4/level5_charac.png',
     level_title_path: './Images/Result/Level4/result_title_level4.png',
     type_img_path: './Images/Result/Level4/level4_type.png',
     psn_img_path: './Images/Result/Level4/level4_psn.png',
