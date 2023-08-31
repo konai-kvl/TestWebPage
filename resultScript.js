@@ -101,7 +101,7 @@ function redirectToInstagramWebsite() {
 
 // 테스트 다시하기 버튼
 restartButton.addEventListener('click', function () {
-    window.location.href = 'question.html'
+    window.location.href = 'index.html'
 });
 // 모나 서비스 이용해보기 버튼
 useMona.addEventListener('click', function () {
