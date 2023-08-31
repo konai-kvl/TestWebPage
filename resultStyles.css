@@ -8,10 +8,7 @@ body {
     align-items: center;
 }
 
-#result-title {
-    width: 80%;
-}
-#level {
+#result-title, #level {
     width: 80%;
 }
 
@@ -212,6 +209,13 @@ body {
         justify-content: space-between; /* 버튼을 양 옆으로 배치 */
         margin: auto 65px;
     }
+    .result-container {
+        position: relative;
+        margin: 10px auto 0px auto;
+
+        max-width: 480px;
+        min-height: 500px;
+    }
   
     #download-result, #result-copy-link {
       margin: 5px;
@@ -223,6 +227,10 @@ body {
         margin: 0px auto 10px auto;
         font-size: 18px;
         height: 50px;
+    }
+
+    #level {
+        width: 200%;
     }
 
     #facebookShareButton, #instaShareButton, #twitterShareButton, #kakaoShareButton {
