@@ -36,7 +36,9 @@ body {
 }
 /* 시작하기 버튼 */
 .button-container {
-    position: relative;
+    position: absolute;
+    top: 570px;
+
     display: flex;
     flex-direction: column; /* 위아래로 배치 */
     justify-content: center;
@@ -57,13 +59,14 @@ body {
 
     color: #005EFF;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 550;
 }
 .box-container {
     position: fixed;
-    top: 500px;
+    /* top: 500px; */
+    bottom: 0;
     left: 0;
     width: 100%;
     z-index: -1;
@@ -81,9 +84,31 @@ body {
 }
 #mona-logo {
     position: relative;
-    top: 300px;
     width: 95px;
     height: 25px;
     margin: 50px;
     z-index: 1;
+}
+
+/* 화면 너비가 600px 이하일 때 */
+@media (max-width: 600px) {
+    .button-container {
+        position: absolute;
+        top: 470px;
+    
+        display: flex;
+        flex-direction: column; /* 위아래로 배치 */
+        justify-content: center;
+        align-items: center;
+    }
+    #ppl-count {
+        margin-bottom: 100px;
+        margin-top: 0px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 450;
+    }
+    #test_character {
+        margin-top: 0px;
+    }
 }
