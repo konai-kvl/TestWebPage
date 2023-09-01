@@ -30,7 +30,7 @@ const result_level0 = {
     psn_img_path: './Images/Result/Level0/level0_psn.png',
     tip_img_path: './Images/Result/Level0/level0_tip.png',
     plan_img_path: './Images/Result/Level0/recommend_plan_level0.png',
-    download_img_path: './Images/level0_download.png'
+    download_img_path: './Images/Result/Level0/lv0 오늘만 사는 파산 아티스트.png'
 };
 const result_level1 = {
     charac_img_path: './Images/Result/Level1/level2_charac.png',
@@ -39,7 +39,7 @@ const result_level1 = {
     psn_img_path: './Images/Result/Level1/level1_psn.png',
     tip_img_path: './Images/Result/Level1/level1_tip.png',
     plan_img_path: './Images/Result/Level1/recommend_plan_level1.png',
-    download_img_path: './Images/level0_download.png'
+    download_img_path: './Images/Result/Level1/lv20 상상으로 절약하는 메타버스 절약러.png'
 };
 const result_level2 = {
     charac_img_path: './Images/Result/Level2/level3_charac.png',
@@ -48,7 +48,7 @@ const result_level2 = {
     psn_img_path: './Images/Result/Level2/level2_psn.png',
     tip_img_path: './Images/Result/Level2/level2_tip.png',
     plan_img_path: './Images/Result/Level2/recommend_plan_level2.png',
-    download_img_path: './Images/level0_download.png'
+    download_img_path: './Images/Result/Level2/lv39 아낀다고 아꼈는데 알뜰 초급자.png'
 };
 const result_level3 = {
     charac_img_path: './Images/Result/Level3/level4_charac.png',
@@ -57,7 +57,7 @@ const result_level3 = {
     psn_img_path: './Images/Result/Level3/level3_psn.png',
     tip_img_path: './Images/Result/Level3/level3_tip.png',
     plan_img_path: './Images/Result/Level3/recommend_plan_level3.png',
-    download_img_path: './Images/level0_download.png'
+    download_img_path: './Images/Result/Level3/lv63 내꿈은 저축왕 알뜰살뜰 주부7단.png'
 };
 const result_level4 = {
     charac_img_path: './Images/Result/Level4/level5_charac.png',
@@ -66,7 +66,7 @@ const result_level4 = {
     psn_img_path: './Images/Result/Level4/level4_psn.png',
     tip_img_path: './Images/Result/Level4/level4_tip.png',
     plan_img_path: './Images/Result/Level4/recommend_plan_level4.png',
-    download_img_path: './Images/level0_download.png'
+    download_img_path: './Images/Result/Level4/lv99 매너온도 99 맑은 눈의 절약킹.png'
 };
 
 // 공유하기 버튼
@@ -128,8 +128,20 @@ copyLink.addEventListener("click", () => {
 
 // 결과 다운로드 버튼 클릭 이벤트
 download_result.addEventListener('click', function () {
+
+    if(point >= 0 && point <= 20) {
+        download_img_url = result_level0.download_img_path
+    } else if(point >= 30 && point <= 40) {
+        download_img_url = result_level1.download_img_path
+    } else if(point >= 50 && point <= 60) {
+        download_img_url = result_level2.download_img_path
+    } else if(point >= 70 && point <= 80) {
+        download_img_url = result_level3.download_img_path
+    } else if(point >= 90 && point <= 100) {
+        download_img_url = result_level4.download_img_path
+    } 
     // 새로운 링크 요소 생성
-    const imageUrl = './Images/level0_download.png'
+    const imageUrl = download_img_url
     const link = document.createElement("a");
     link.href = imageUrl;
 
