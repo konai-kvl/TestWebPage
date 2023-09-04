@@ -220,6 +220,20 @@ function showResult(point) {
     saveTipLabel.style.width = '100%'
 }
 
+// 공유 이미지 썸네일 경로 반환
+function returnPlanImg(point) {
+    if(point >= 0 && point <= 20) {
+        return 'https://github.com/konai-kvl/TestWebPage/assets/87636557/26e211f0-762a-44c4-9250-dc0f5698ecee'
+    } else if(point >= 30 && point <= 40) {
+        return 'https://github.com/konai-kvl/TestWebPage/assets/87636557/d72b2de8-d21c-40b4-8cd3-3d675ad7de5c'
+    } else if(point >= 50 && point <= 60) {
+        return 'https://github.com/konai-kvl/TestWebPage/assets/87636557/b55fd40e-c1a9-49e9-b326-7e7b42b9c1a6'
+    } else if(point >= 70 && point <= 80) {
+        return 'https://github.com/konai-kvl/TestWebPage/assets/87636557/77ba98dc-6278-46c5-a2f1-d614346db453'
+    } else if(point >= 90 && point <= 100) {
+        return 'https://github.com/konai-kvl/TestWebPage/assets/87636557/7342fc26-11f3-4e66-baac-5b673f4a4385'
+    } 
+}
 
 function shareOnFacebook() {
     const url = encodeURIComponent(window.location.href);
@@ -239,7 +253,7 @@ function kakaoShare() {
       content: {
         title: `${resultContent(point)}`,
         description: '절약 유형 테스트 결과입니다.',
-        imageUrl: './Images/result_title.png',
+        imageUrl: returnPlanImg(point),
         link: {
           mobileWebUrl: 'https://konai-kvl.github.io/TestWebPage/',
           webUrl: 'https://konai-kvl.github.io/TestWebPage/',
