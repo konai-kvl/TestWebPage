@@ -112,19 +112,62 @@ findMonaPlan.addEventListener('click', function () {
     window.location.href = 'https://mobilemona.co.kr/view/plan/findListNext.aspx'
 });
 // 결과 링크 복사
+// copyLink.addEventListener("click", () => {
+//     const currentLink = window.location.href; // 현재 페이지의 링크 가져오기
+//     const thumbnailImageSrc = 'https://github.com/konai-kvl/TestWebPage/assets/87636557/26e211f0-762a-44c4-9250-dc0f5698ecee'; // 썸네일 이미지 경로 설정
+
+//     // 가상의 텍스트 입력 상자 생성하여 복사
+//     const tempInput = document.createElement("input");
+//     // tempInput.value = currentLink;
+//     // 텍스트와 이미지를 div 요소 내에 추가합니다.
+//     tempInput.innerHTML = `
+//   <a href="${currentLink}">링크</a>
+//   <img src="${thumbnailImageSrc}" alt="썸네일 이미지">
+// `;
+//     document.body.appendChild(tempInput);
+//     tempInput.select();
+//     document.execCommand("copy");
+//     document.body.removeChild(tempInput);
+
+//     alert("링크가 복사되었습니다.(수정)");
+//   });
+
 copyLink.addEventListener("click", () => {
     const currentLink = window.location.href; // 현재 페이지의 링크 가져오기
-
-    // 가상의 텍스트 입력 상자 생성하여 복사
-    const tempInput = document.createElement("input");
-    tempInput.value = currentLink;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
-
-    alert("링크가 복사되었습니다.");
+    const thumbnailImageSrc = returnWebShareImg(point); // 썸네일 이미지 경로 설정
+  
+    // 가상의 div 요소를 생성합니다.
+    const container = document.createElement("div");
+  
+    // 텍스트와 이미지를 div 요소 내에 추가합니다.
+    container.innerHTML = `
+      <a href="${currentLink}">링크</a>
+      <img src="${thumbnailImageSrc}" alt="썸네일 이미지">
+    `;
+  
+    // div 요소를 문서에 추가합니다.
+    document.body.appendChild(container);
+  
+    // div 요소 내의 내용을 선택하고 복사 명령을 실행합니다.
+    const range = document.createRange();
+    range.selectNode(container);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+  
+    try {
+      // 복사 명령을 실행합니다.
+      document.execCommand("copy");
+      alert("링크와 썸네일 이미지가 복사되었습니다.");
+    } catch (err) {
+      console.error("복사 실패: ", err);
+    }
+  
+    // div 요소를 문서에서 제거합니다.
+    document.body.removeChild(container);
   });
+  
+  
 
 // 결과 다운로드 버튼 클릭 이벤트
 download_result.addEventListener('click', function () {
@@ -220,8 +263,23 @@ function showResult(point) {
     saveTipLabel.style.width = '100%'
 }
 
-// 공유 이미지 썸네일 경로 반환
-function returnPlanImg(point) {
+// 카카오톡 공유 이미지 썸네일 경로 반환
+function returnKakaoShareImg(point) {
+    if(point >= 0 && point <= 20) {
+        return 'https://github.com/konai-kvl/TestWebPage/assets/87636557/2a09ff6b-400f-43c3-b314-6d9bd97e08aa'
+    } else if(point >= 30 && point <= 40) {
+        return 'https://github.com/konai-kvl/TestWebPage/assets/87636557/1c4ddf79-6f77-49ce-b51c-fafc5b048988'
+    } else if(point >= 50 && point <= 60) {
+        return 'https://github.com/konai-kvl/TestWebPage/assets/87636557/3cfc3572-a21e-42df-bbd2-5a0f45c8bd2a'
+    } else if(point >= 70 && point <= 80) {
+        return 'https://github.com/konai-kvl/TestWebPage/assets/87636557/36ca8214-16b8-4a3d-b6e7-e57867614b4d'
+    } else if(point >= 90 && point <= 100) {
+        return 'https://github.com/konai-kvl/TestWebPage/assets/87636557/489a4e0f-3173-4a9f-9586-f48bfe762308'
+    } 
+}
+
+// 웹링크 공유 이미지 썸네일 경로 반환
+function returnWebShareImg(point) {
     if(point >= 0 && point <= 20) {
         return 'https://github.com/konai-kvl/TestWebPage/assets/87636557/26e211f0-762a-44c4-9250-dc0f5698ecee'
     } else if(point >= 30 && point <= 40) {
@@ -253,7 +311,7 @@ function kakaoShare() {
       content: {
         title: `${resultContent(point)}`,
         description: '절약 유형 테스트 결과입니다.',
-        imageUrl: returnPlanImg(point),
+        imageUrl: returnKakaoShareImg(point),
         link: {
           mobileWebUrl: 'https://konai-kvl.github.io/TestWebPage/',
           webUrl: 'https://konai-kvl.github.io/TestWebPage/',
