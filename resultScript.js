@@ -113,15 +113,15 @@ findMonaPlan.addEventListener('click', function () {
 });
 // 결과 링크 복사
 copyLink.addEventListener("click", () => {
-    const currentLink = window.location.href; // 현재 페이지의 링크 가져오기
-    // 가상의 텍스트 입력 상자 생성하여 복사
+    shareContent();
+    const currentLink = window.location.href; 
     const tempInput = document.createElement("input");
     tempInput.value = currentLink;
     document.body.appendChild(tempInput);
     tempInput.select();
     document.execCommand("copy");
     document.body.removeChild(tempInput);
-    alert("링크가하 복사되었습니다.");
+    alert("링크가 복사되었습니다.");
 });
 
 
