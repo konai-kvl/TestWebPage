@@ -113,7 +113,6 @@ findMonaPlan.addEventListener('click', function () {
 });
 // 결과 링크 복사
 copyLink.addEventListener("click", () => {
-    shareContent();
     const currentLink = window.location.href; 
     const tempInput = document.createElement("input");
     tempInput.value = currentLink;
@@ -157,6 +156,7 @@ download_result.addEventListener('click', function () {
 
 // 결과 페이지
 function showResult(point) {
+    shareContent(point);
     const ogUrlMetaTagURL = document.querySelector('meta[property="og:url"]');
     if (ogUrlMetaTagURL) {
         ogUrlMetaTagURL.setAttribute("content", window.location.href);
@@ -302,7 +302,6 @@ function resultContent(point) {
     } else if(point >= 90 && point <= 100) {
         result = "Lv. 99 매너온도 99% 맑은 눈의 절약킹"
     } 
-
     return result
 }
 // url, title, image
