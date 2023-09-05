@@ -124,44 +124,6 @@ copyLink.addEventListener("click", () => {
     alert("링크가 복사되었습니다.");
 });
 
-
-// copyLink.addEventListener("click", () => {
-//     const currentLink = window.location.href; // 현재 페이지의 링크 가져오기
-//     const thumbnailImageSrc = returnWebShareImg(point); // 썸네일 이미지 경로 설정
-  
-//     // 가상의 div 요소를 생성합니다.
-//     const container = document.createElement("div");
-  
-//     // 텍스트와 이미지를 div 요소 내에 추가합니다.
-//     container.innerHTML = `
-//       <a href="${currentLink}">링크</a>
-//       <img src="${thumbnailImageSrc}" alt="썸네일 이미지">
-//     `;
-  
-//     // div 요소를 문서에 추가합니다.
-//     document.body.appendChild(container);
-  
-//     // div 요소 내의 내용을 선택하고 복사 명령을 실행합니다.
-//     const range = document.createRange();
-//     range.selectNode(container);
-//     const selection = window.getSelection();
-//     selection.removeAllRanges();
-//     selection.addRange(range);
-  
-//     try {
-//       // 복사 명령을 실행합니다.
-//       document.execCommand("copy");
-//       alert("링크와 썸네일 이미지가 복사되었습니다.");
-//     } catch (err) {
-//       console.error("복사 실패: ", err);
-//     }
-  
-//     // div 요소를 문서에서 제거합니다.
-//     document.body.removeChild(container);
-//   });
-  
-  
-
 // 결과 다운로드 버튼 클릭 이벤트
 download_result.addEventListener('click', function () {
 
