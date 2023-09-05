@@ -355,16 +355,43 @@ function shareContent(point) {
             ogUrlMetaTagImage.setAttribute("content", 'https://github.com/konai-kvl/TestWebPage/assets/87636557/26e211f0-762a-44c4-9250-dc0f5698ecee');
         }
     } else if(point >= 30 && point <= 40) {
-        result = "Lv. 20 상상으로 절약하는 메타버스 절약러"
+        const ogUrlMetaTagTitle = document.querySelector('meta[property="og:title"]');
+        if (ogUrlMetaTagTitle) {
+            ogUrlMetaTagTitle.setAttribute("content", "Lv. 20 상상으로 절약하는 메타버스 절약러");
+        }
+        const ogUrlMetaTagImage = document.querySelector('meta[property="og:image"]');
+        if (ogUrlMetaTagImage) {
+            ogUrlMetaTagImage.setAttribute("content", 'https://github.com/konai-kvl/TestWebPage/assets/87636557/d72b2de8-d21c-40b4-8cd3-3d675ad7de5c');
+        }
     } else if(point >= 50 && point <= 60) {
-        result = "Lv. 39 아낀다고 아꼈는데! 알뜰 초급자"
+        const ogUrlMetaTagTitle = document.querySelector('meta[property="og:title"]');
+        if (ogUrlMetaTagTitle) {
+            ogUrlMetaTagTitle.setAttribute("content", "Lv. 39 아낀다고 아꼈는데! 알뜰 초급자");
+        }
+        const ogUrlMetaTagImage = document.querySelector('meta[property="og:image"]');
+        if (ogUrlMetaTagImage) {
+            ogUrlMetaTagImage.setAttribute("content", 'https://github.com/konai-kvl/TestWebPage/assets/87636557/b55fd40e-c1a9-49e9-b326-7e7b42b9c1a6');
+        }
     } else if(point >= 70 && point <= 80) {
-        result = "Lv. 63 내꿈은 저축왕 알뜰살뜰 주부7단"
+        const ogUrlMetaTagTitle = document.querySelector('meta[property="og:title"]');
+        if (ogUrlMetaTagTitle) {
+            ogUrlMetaTagTitle.setAttribute("content", "Lv. 63 내꿈은 저축왕 알뜰살뜰 주부7단");
+        }
+        const ogUrlMetaTagImage = document.querySelector('meta[property="og:image"]');
+        if (ogUrlMetaTagImage) {
+            ogUrlMetaTagImage.setAttribute("content", 'https://github.com/konai-kvl/TestWebPage/assets/87636557/77ba98dc-6278-46c5-a2f1-d614346db453');
+        }
     } else if(point >= 90 && point <= 100) {
-        result = "Lv. 99 매너온도 99% 맑은 눈의 절약킹"
+        const ogUrlMetaTagTitle = document.querySelector('meta[property="og:title"]');
+        if (ogUrlMetaTagTitle) {
+            ogUrlMetaTagTitle.setAttribute("content", "Lv. 99 매너온도 99% 맑은 눈의 절약킹");
+        }
+        const ogUrlMetaTagImage = document.querySelector('meta[property="og:image"]');
+        if (ogUrlMetaTagImage) {
+            ogUrlMetaTagImage.setAttribute("content", 'https://github.com/konai-kvl/TestWebPage/assets/87636557/7342fc26-11f3-4e66-baac-5b673f4a4385');
+        }
     } 
 
-    return result
 }
 
 showResult(point);
