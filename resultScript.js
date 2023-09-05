@@ -195,6 +195,11 @@ download_result.addEventListener('click', function () {
 
 // 결과 페이지
 function showResult(point) {
+    const ogUrlMetaTagURL = document.querySelector('meta[property="og:url"]');
+    if (ogUrlMetaTagURL) {
+        ogUrlMetaTagURL.setAttribute("content", window.location.href);
+    }
+
     if(point >= 0 && point <= 20) {
         level_title_img = result_level0.level_title_path
         character_img = result_level0.charac_img_path
@@ -341,10 +346,6 @@ function resultContent(point) {
 // url, title, image
 function shareContent(point) {
     if(point >= 0 && point <= 20) {
-        const ogUrlMetaTagURL = document.querySelector('meta[property="og:url"]');
-        if (ogUrlMetaTagURL) {
-            ogUrlMetaTagURL.setAttribute("content", window.location.href);
-        }
         const ogUrlMetaTagTitle = document.querySelector('meta[property="og:title"]');
         if (ogUrlMetaTagTitle) {
             ogUrlMetaTagTitle.setAttribute("content", "Lv. 0 오늘만 사는 파산아티스트");
