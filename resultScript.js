@@ -338,5 +338,32 @@ function resultContent(point) {
 
     return result
 }
+// url, title, image
+function shareContent(point) {
+    if(point >= 0 && point <= 20) {
+        const ogUrlMetaTagURL = document.querySelector('meta[property="og:url"]');
+        if (ogUrlMetaTagURL) {
+            ogUrlMetaTagURL.setAttribute("content", window.location.href);
+        }
+        const ogUrlMetaTagTitle = document.querySelector('meta[property="og:title"]');
+        if (ogUrlMetaTagTitle) {
+            ogUrlMetaTagTitle.setAttribute("content", "Lv. 0 오늘만 사는 파산아티스트");
+        }
+        const ogUrlMetaTagImage = document.querySelector('meta[property="og:image"]');
+        if (ogUrlMetaTagImage) {
+            ogUrlMetaTagImage.setAttribute("content", 'https://github.com/konai-kvl/TestWebPage/assets/87636557/26e211f0-762a-44c4-9250-dc0f5698ecee');
+        }
+    } else if(point >= 30 && point <= 40) {
+        result = "Lv. 20 상상으로 절약하는 메타버스 절약러"
+    } else if(point >= 50 && point <= 60) {
+        result = "Lv. 39 아낀다고 아꼈는데! 알뜰 초급자"
+    } else if(point >= 70 && point <= 80) {
+        result = "Lv. 63 내꿈은 저축왕 알뜰살뜰 주부7단"
+    } else if(point >= 90 && point <= 100) {
+        result = "Lv. 99 매너온도 99% 맑은 눈의 절약킹"
+    } 
+
+    return result
+}
 
 showResult(point);
