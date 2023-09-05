@@ -16,7 +16,7 @@ link_share.addEventListener('click', function () {
   document.execCommand("copy");
   document.body.removeChild(tempInput);
 
-  alert("링크가 복사되었습니다.");
+  alert("링크가아아 복사되었습니다.");
 });
 
 startButton.addEventListener("mouseenter", () => {

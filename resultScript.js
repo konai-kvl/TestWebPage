@@ -122,7 +122,7 @@ copyLink.addEventListener("click", () => {
     document.execCommand("copy");
     document.body.removeChild(tempInput);
     alert("링크가하 복사되었습니다.");
-  });
+});
 
 
 // copyLink.addEventListener("click", () => {
