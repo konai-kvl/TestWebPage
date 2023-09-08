@@ -161,6 +161,10 @@ function showResult(point) {
     if (ogUrlMetaTagURL) {
         ogUrlMetaTagURL.setAttribute("content", window.location.href);
     }
+    const ogUrlMetaTagTitle = document.querySelector('meta[property="og:title"]');
+    if (ogUrlMetaTagTitle) {
+        ogUrlMetaTagTitle.setAttribute("content", "Lv. 0 오늘만 사는 파산아티스트");
+    }
 
     if(point >= 0 && point <= 20) {
         level_title_img = result_level0.level_title_path
