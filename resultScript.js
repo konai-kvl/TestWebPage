@@ -156,7 +156,7 @@ download_result.addEventListener('click', function () {
 
 // 결과 페이지
 function showResult(point) {
-    shareContent(point);
+    // shareContent(point);
     const ogUrlMetaTagURL = document.querySelector('meta[property="og:url"]');
     if (ogUrlMetaTagURL) {
         ogUrlMetaTagURL.setAttribute("content", window.location.href);
