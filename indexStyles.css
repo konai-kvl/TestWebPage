@@ -79,13 +79,6 @@ body {
     background-color: #B3D1FE;
     z-index: -2;
 }
-#mona-logo {
-    position: relative;
-    width: 95px;
-    height: 25px;
-    margin: 30px;
-    z-index: 1;
-}
 
 /* 화면 너비가 600px 이하, 300px 이상일 때 */
 @media (max-width: 600px) and (min-width: 300px) {
