@@ -92,9 +92,12 @@ button2.addEventListener('click', function () {
 
 // 선택지 버튼 문구 변경
 function updateButtonText() {
-    button1.textContent = button1Text[currentQuestionIndex]
+    button1.textContent = button1Text[currentQuestionIndex];
     button2.textContent = button2Text[currentQuestionIndex]
-}
+
+    button1.style.font = "500 20px 'Noto Sans KR', sans-serif";
+    button2.style.font = "500 20px 'Noto Sans KR', sans-serif";
+};
 
 // 질문이 있을 때 showPage
 function showPage() {
@@ -112,6 +115,7 @@ function showImage() {
 // 질문 출력하기
 function showQuestion() {
     questionDiv.textContent = questions[currentQuestionIndex];
+    questionDiv.style.font = "700 24px 'Noto Sans KR', sans-serif";
 }
 
 // 로딩 후 결과 페이지로 이동
