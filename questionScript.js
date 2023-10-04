@@ -1,5 +1,5 @@
 const questionDiv = document.getElementById('question');
-const imageContainer = document.getElementById('image-container');
+const imageContainer = document.getElementById('question-image');
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
 
@@ -7,6 +7,9 @@ const button2 = document.getElementById('button2');
 const progressBar = document.getElementById('progress-bar');
 const question_count = document.getElementById('question-count');
 const progress_icon = document.getElementById('icon');
+
+const quizContainer = document.getElementById('quiz-container');
+
 let progress = 0;
 let point = 0;
 
@@ -95,8 +98,8 @@ function updateButtonText() {
     button1.textContent = button1Text[currentQuestionIndex];
     button2.textContent = button2Text[currentQuestionIndex]
 
-    button1.style.font = "500 20px 'Noto Sans KR', sans-serif";
-    button2.style.font = "500 20px 'Noto Sans KR', sans-serif";
+    button1.style.font = "500 15px 'Noto Sans KR', sans-serif";
+    button2.style.font = "500 15px 'Noto Sans KR', sans-serif";
 };
 
 // 질문이 있을 때 showPage
@@ -109,17 +112,20 @@ function showPage() {
 // 이미지 보여주기
 function showImage() {
     const imageUrl = images[currentQuestionIndex];
-    imageContainer.innerHTML = `<img src="${imageUrl}" alt="Image">`;
+    imageContainer.src = `${imageUrl}`;
+    imageContainer.style.width = '30%';
+    imageContainer.style.height = 'auto';
 }
 
 // 질문 출력하기
 function showQuestion() {
     questionDiv.textContent = questions[currentQuestionIndex];
-    questionDiv.style.font = "700 24px 'Noto Sans KR', sans-serif";
+    questionDiv.style.font = "700 20px 'Noto Sans KR', sans-serif";
 }
 
 // 로딩 후 결과 페이지로 이동
 function showResult() {
+    // quizContainer.style.display = 'none';
     const loadingContainer = document.getElementById("loadingContainer");
 
     // Show loading container

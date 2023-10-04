@@ -8,20 +8,20 @@ body {
 img {
     width: 35%;
     height: 35%;
-    margin-bottom: 73px;
+    margin-bottom: 50px;
 }
 
 /* 아이콘 스타일 */
 #icon {
     position: absolute;
-    top: 34px;
+    top: 22px;
     left: -20px;
     margin-left: 2%;
     transition: margin-left 0.5s ease-in-out; /* 애니메이션 효과 추가 */
 }
 #progressbar_icon {
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: auto;
     margin-bottom: 0px;
 }
 
@@ -48,14 +48,14 @@ img {
     margin-left: 0px;
     text-align: start;
     color: #000;
-    font-size: 17px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 #progress-bar {
     position: absolute;
-    top: 60px;
+    top: 40px;
     left: 0;
     width: 0%;
     height: 10px;
@@ -65,7 +65,7 @@ img {
 }
 #progress-background {
     /* position: relative; */
-    margin: 36px 20px 0px 0px;
+    margin: 20px 20px 0px 0px;
     width: 100%;
     height: 10px;
     border-radius: 5px;
@@ -76,7 +76,7 @@ img {
 /* 질문 라벨 */
 .question {
     position: relative;
-    margin-top: 75px;
+    margin-top: 40px;
     
     text-align: center;
     font-size: 24px;
@@ -90,7 +90,7 @@ img {
     word-wrap: break-word; /* 단어가 길어질 경우 자동으로 줄 바꿈 */
     line-height: 37px; /* 줄 간격 조절 */
     
-    min-height: 100px;
+    min-height: 80px;
 }
 /* 버튼 컨테이너 */
 .button-container {
@@ -107,7 +107,7 @@ img {
     border: 3px solid #C3C3E1;
     background: #FFFFFF;
     width: 100%;
-    height: 90px;
+    height: 80px;
     cursor: pointer;
     margin: 5px;
     transition: background-color 0.3s ease;
@@ -127,7 +127,7 @@ img {
     border: 3px solid #C3C3E1;
     background: #FFFFFF;
     width: 100%;
-    height: 90px;
+    height: 80px;
     cursor: pointer; 
     margin: 5px;
     transition: background-color 0.3s ease;
@@ -163,4 +163,13 @@ img {
 #loadingImage {
     width: 150px; 
     height: 150px;
+}
+
+@media (max-width: 600px) {
+    .button1:hover {
+        background-color: #FFFFFF;
+    }
+    .button2:hover {
+        background-color: #FFFFFF;
+    }
 }
