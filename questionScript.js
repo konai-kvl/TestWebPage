@@ -5,12 +5,10 @@ const button2 = document.getElementById('button2');
 
 // 상태바 Property
 const progressBar = document.getElementById('progress-bar');
+const progressBarIcon = document.getElementById('progressbar_icon');
 const question_count = document.getElementById('question-count');
 const progress_icon = document.getElementById('icon');
-
-const quizContainer = document.getElementById('quiz-container');
-
-let progress = 0;
+let progress = 1;
 let point = 0;
 
 // 질문 Array
@@ -125,7 +123,6 @@ function showQuestion() {
 
 // 로딩 후 결과 페이지로 이동
 function showResult() {
-    // quizContainer.style.display = 'none';
     const loadingContainer = document.getElementById("loadingContainer");
 
     // Show loading container
@@ -153,15 +150,19 @@ function updateProgressBar() {
     question_count.textContent = `${progress}/10`;
     progress_icon.style.marginLeft = `${progress * 10}%`;
 
-    // 페이지 로딩이 끝나면 상태바 숨기기
     if (progress === 10) {
-        setTimeout(function () {
-            progressBar.style.display = 'none';
-        }, 500); // 0.5초 뒤에 상태바 숨김
+        progress_icon.style.marginLeft = `${11 * 10}%`;
     }
+}
+
+function setProgressBar() {
+    progressBar.style.width = `${progress * 10}%`;
+    question_count.textContent = `${progress}/10`;
+    progress_icon.style.marginLeft = `${progress * 10}%`;
 }
 
 
 // 초기 페이지 로드 시 첫 번째 페이지 표시
 showPage();
+setProgressBar();
 
