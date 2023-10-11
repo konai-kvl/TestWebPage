@@ -25,8 +25,8 @@ body {
 }
 #title {
     margin-top: 20%;
-    width: 90%;
-    height: 90%;
+    width: 70%;
+    height: auto;
 }
 #test_character {
     margin-top: 24px;
@@ -40,13 +40,14 @@ body {
     top: 570px;
     left: 0px;
 
+    width: 100%;
     display: flex;
     flex-direction: column; /* 위아래로 배치 */
     justify-content: center;
     align-items: center;
 }
 #startButton, #link_share {
-    width: 85%;
+    width: 70%;
     height: 100%;
     margin: 8px;
 }
@@ -128,6 +129,7 @@ body {
     .button-container {
         position: absolute;
         top: 430px;
+        left: 0px;
     
         display: flex;
         flex-direction: column; 
